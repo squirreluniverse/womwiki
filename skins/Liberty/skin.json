@@ -1,0 +1,102 @@
+{
+	"name": "Liberty",
+	"author": [
+		"Librewiki developers", "..."
+	],
+	"url": "https://gitlab.com/librewiki/Liberty-MW-Skin",
+	"descriptionmsg": "liberty-desc",
+	"namemsg": "skinname-liberty",
+	"license-name": "GPL-3.0+",
+	"type": "skin",
+	"version": "1.1.10a2",
+	"ValidSkinNames": {
+		"liberty": "Liberty"
+	},
+	"MessagesDirs": {
+		"Liberty": [
+			"i18n"
+		]
+	},
+	"config": {
+		"LibertyEnableLiveRC": true,
+		"LibertyUseGravatar": true,
+		"LibertyMainColor": "#02378a"
+	},
+	"ResourceModules": {
+		"skins.liberty.styles": {
+			"styles": {
+				"css/font/Nanum Gothic.css": {
+					"media": "all"
+				},
+				"css/font/Noto Sans KR.css": {
+					"media": "all"
+				},
+				"bootstrap/css/bootstrap.min.css": {
+					"media": "all"
+				},
+				"css/default.css": {
+					"media": "all"
+				},
+				"css/default_mobile.css": {
+					"media": "all"
+				},
+				"css/wiki.css": {
+					"media": "all"
+				},
+				"css/only-mw.css": {
+					"media": "all"
+				},
+				"css/wiki-table.css": {
+					"media": "all"
+				},
+				"css/wikiedittor-liberty.css": {
+					"media": "all"
+				}
+			}
+		},
+
+		"skins.liberty.bootstrap": {
+			"scripts": [
+				"js/lib/jquery.ba-throttle-debounce.js",
+				"js/lib/jquery.min.js",
+				"js/lib/bootstrap.min.js"
+			]
+		},
+
+		"skins.liberty.layoutjs": {
+			"scripts": [
+				"js/index-button.js",
+				"js/delay-scrolling.js",
+				"js/disable-notice.js",
+				"js/sns-button.js",
+				"js/layout.js"
+			],
+			"dependencies": "mediawiki.cookie"
+		},
+		"skins.liberty.liverc": {
+			"scripts": "js/live-recent.js",
+			"messages": [ "liberty-feed-new" ],
+			"dependencies": "mediawiki.util"
+		},
+		"skins.liberty.loginjs": {
+			"scripts": "js/login-request.js",
+			"dependencies": "mediawiki.util",
+			"messages": [ "liberty-warning", "liberty-warning-text" ]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "Liberty"
+	},
+	"ResourceModuleSkinStyles": {
+		"liberty": {
+			"+mediawiki.action.view.filepage": "css/skinStyles/mediawiki.action.view.filepage.css",
+			"+mediawiki.special.preferences.styles": "css/skinStyles/mediawiki.special.preferences.styles.css"
+		}
+	},
+	"AutoloadClasses": {
+		"SkinLiberty": "SkinLiberty.php",
+		"LibertyTemplate": "LibertyTemplate.php"
+	},
+	"manifest_version": 1
+}
