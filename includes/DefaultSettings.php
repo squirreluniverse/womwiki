@@ -5056,8 +5056,16 @@ $wgBlockDisablesLogin = false;
  *
  * @note Extensions should not modify this, but use the TitleReadWhitelist
  * hook instead.
+ * 
+ * Edited by Wooda, Sat, Nov 17, 2018
  */
-$wgWhitelistRead = false;
+$wgWhitelistRead = true;
+
+/**
+ * Allow anonymous users to read the main page and create their account
+ * Added by Wooda, Sat, Nov 17, 2018
+ */
+$wgWhitelistRead = array ("여성위키:_환영합니다!", "특수:계정만들기", "Special:CreateAccount");
 
 /**
  * Pages anonymous user may see, set as an array of regular expressions.
