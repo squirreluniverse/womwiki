@@ -5766,8 +5766,10 @@ $wgRateLimitsExcludedIPs = [];
  * Log IP addresses in the recentchanges table; can be accessed only by
  * extensions (e.g. CheckUser) or a DB admin
  * Used for retroactive autoblocks
+ * 
+ * Edited by Wooda, Sat, Nov 17, 2018
  */
-$wgPutIPinRC = true;
+$wgPutIPinRC = false;
 
 /**
  * Integer defining default number of entries to show on
